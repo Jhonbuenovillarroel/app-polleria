@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { inter } from "@/fonts/fonts";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,9 +11,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="es" suppressHydrationWarning>
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+  return <>{children}</>;
 }

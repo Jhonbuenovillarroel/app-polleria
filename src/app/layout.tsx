@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/styles/globals.css";
 import { inter } from "@/fonts/fonts";
+import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "@/components/(providers)/ThemeProvider/provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +16,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} antialiased bg-zinc-100 dark:bg-zinc-950`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

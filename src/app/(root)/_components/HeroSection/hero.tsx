@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -13,23 +14,21 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="flex gap-3">
-          <Button
-            variant={"orangeButton"}
-            size={"orangeButton"}
-            className="flex items-center gap-1"
+        <div className="flex gap-3 text-white">
+          <Link
+            href={`/carta`}
+            className="flex items-center gap-1 px-6 text-sm bg-orange-500 rounded-full h-11"
           >
             <span>Ver productos</span>
             <ChevronRight className="w-4 h-4" />
-          </Button>
-          <Button
-            variant={"orangeOutline"}
-            size={"orangeButton"}
-            className="flex items-center gap-1"
+          </Link>
+          <Link
+            href={`/carta`}
+            className="flex items-center gap-1 px-6 text-sm h-11 border border-orange-500 rounded-full hover:bg-orange-500 hover:border-orange-500 transition-all duration-200"
           >
             <span>Explorar menú</span>
             <ChevronRight className="w-4 h-4" />
-          </Button>
+          </Link>
         </div>
       </div>
     </section>

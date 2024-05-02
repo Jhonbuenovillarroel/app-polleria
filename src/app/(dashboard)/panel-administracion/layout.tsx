@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "../globals.css";
+import "@/app/styles/globals.css";
+import Sidebar from "./_components/Sidebar/sidebar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,5 +12,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return (
+    <div className="flex">
+      <Sidebar />
+      {children}
+    </div>
+  );
 }

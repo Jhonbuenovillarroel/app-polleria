@@ -1,0 +1,102 @@
+.react-select-container .react-select__control {
+  background-color: rgba(250, 250, 250);
+  border: 1px solid rgba(225, 225, 225);
+  font-size: 14px;
+  cursor: text;
+}
+.react-select-container .react-select__control:hover {
+  border: 1px solid rgba(225, 225, 225);
+}
+html.dark .react-select-container .react-select__control {
+  background-color: rgba(10, 10, 10);
+  border: 1px solid rgba(40, 40, 40);
+}
+
+.react-select-container .react-select__input-container {
+  color: rgba(10, 10, 10);
+}
+html.dark .react-select-container .react-select__input-container {
+  color: white;
+}
+
+.react-select-container .react-select__menu {
+  background-color: rgb(250, 250, 250);
+}
+html.dark .react-select-container .react-select__menu {
+  background-color: rgb(10, 10, 10);
+}
+
+.react-select-container .react-select__option {
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+}
+.react-select-container .react-select__option:hover {
+  background-color: rgba(240, 240, 240);
+  transition: all;
+  transition-duration: 150ms;
+}
+html.dark .react-select-container .react-select__option:hover {
+  background-color: rgba(25, 25, 25);
+}
+
+.react-select-container .react-select__multi-value {
+  background-color: rgb(220, 220, 220);
+}
+html.dark .react-select-container .react-select__multi-value {
+  background-color: rgb(36, 36, 36);
+}
+
+html.dark .react-select-container .react-select__multi-value__label {
+  color: rgb(200, 200, 200);
+}
+
+.react-select-container .react-select__multi-value__remove {
+  transition: all;
+  transition-duration: 200ms;
+}
+.react-select-container .react-select__multi-value__remove:hover {
+  background-color: rgb(180, 180, 180);
+  color: white;
+}
+html.dark .react-select-container .react-select__multi-value__remove:hover {
+  background-color: rgb(80, 80, 80);
+  color: rgb(220, 220, 220);
+}
+
+.react-select-container .react-select__clear-indicator {
+  cursor: pointer;
+  color: rgb(180, 180, 180);
+}
+.react-select-container .react-select__clear-indicator:hover {
+  color: rgb(120, 120, 120);
+}
+html.dark .react-select-container .react-select__clear-indicator {
+  cursor: pointer;
+  color: rgb(180, 180, 180);
+}
+html.dark .react-select-container .react-select__clear-indicator:hover {
+  color: rgb(220, 220, 220);
+}
+
+.react-select-container .react-select__indicator-separator {
+  background-color: rgb(200, 200, 200);
+}
+html.dark .react-select-container .react-select__indicator-separator {
+  background-color: rgb(80, 80, 80);
+}
+
+.react-select-container .react-select__dropdown-indicator {
+  color: rgb(200, 200, 200);
+  cursor: pointer;
+}
+.react-select-container .react-select__dropdown-indicator:hover {
+  color: rgb(200, 200, 200);
+  cursor: pointer;
+}
+html.dark .react-select-container .react-select__dropdown-indicator {
+  color: rgb(180, 180, 180);
+}
+html.dark .react-select-container .react-select__dropdown-indicator:hover {
+  color: rgb(220, 220, 220);
+}

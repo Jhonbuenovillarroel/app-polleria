@@ -1,50 +1,31 @@
-import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
-import Image from "next/image";
+import { image, product, productCategory } from "@prisma/client";
 import React from "react";
+import { ShoppingBasket } from "lucide-react";
+import MenuItem from "../MenuItem/menu-item";
 
-const MenuSection = () => {
+interface Props {
+  products: (product & { categories: productCategory[]; images: image[] })[];
+}
+
+const MenuSection = ({ products }: Props) => {
   return (
     <section className="pt-12 pb-20 flex flex-col gap-12">
       <h2 className="text-center text-3xl font-semibold">Nuestros Productos</h2>
 
-      <div className="grid grid-cols-3 gap-12 max-w-[1500px] mx-auto">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-      </div>
+      {!!products.length ? (
+        <div className="grid grid-cols-3 gap-12 max-w-[900px] mx-auto">
+          {products.map((product) => (
+            <MenuItem key={product.id} product={product} />
+          ))}
+        </div>
+      ) : (
+        <div className="w-full flex items-center justify-center">
+          <ShoppingBasket className="w-5 h-5" strokeWidth={1.5} />
+          <p className="w-full max-w-[280px]">No hay productos disponibles</p>
+        </div>
+      )}
     </section>
   );
 };
 
 export default MenuSection;
-
-const Product = () => {
-  return (
-    <div className="w-full flex flex-col gap-4 px-8 min-w-[280px] py-6 rounded-md shadow-xl">
-      <Image
-        className="rounded-full w-40 mx-auto"
-        src={`/images/menu/menu-dish.jpg`}
-        width={400}
-        height={400}
-        alt="plato del menu"
-      />
-      <div className="flex flex-col gap-1">
-        <h4 className="font-medium">Pollo Broaster</h4>
-        <p className="font-bold">S/ 14.00</p>
-        <div className="mt-3">
-          <Button
-            variant={"orangeButton"}
-            className="flex items-center gap-2 text-zinc-100 hover:text-orange-500 hover:bg-transparent"
-          >
-            <span>Añadir al carrito</span>
-            <Plus className="w-4 h-4" strokeWidth={2} />
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-};

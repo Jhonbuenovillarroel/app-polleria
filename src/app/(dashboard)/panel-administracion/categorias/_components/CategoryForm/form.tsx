@@ -50,7 +50,7 @@ const CategoryForm = ({ mode, category }: Props) => {
         mode === "create"
           ? "/api/categories/api/create"
           : "/api/categories/api/edit",
-        mode === "create" ? values : { ...values, id: category.id }
+        mode === "create" ? values : { ...values, id: category?.id }
       );
 
       if (data.ok) {

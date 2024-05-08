@@ -30,7 +30,7 @@ const DataTable = <TData, TValue>({
   return (
     <div className="flex flex-col mt-10 items-center justify-center w-full">
       <UploadImages product={product} />
-      <DataTableGlobal table={table} />
+      <DataTableGlobal table={table} columns={columns} />
     </div>
   );
 };

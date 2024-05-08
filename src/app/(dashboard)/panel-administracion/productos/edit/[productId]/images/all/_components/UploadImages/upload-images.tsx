@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { CldUploadWidget } from "next-cloudinary";
 import { Button } from "@/components/ui/button";
-import { Image, Loader2 } from "lucide-react";
+import { Image as ImageIcon, Loader2 } from "lucide-react";
 import { product } from "@prisma/client";
 import toast from "react-hot-toast";
-import result from "postcss/lib/result";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
@@ -75,7 +74,7 @@ const UploadImages = ({ product }: Props) => {
                 </>
               ) : (
                 <>
-                  <Image className="w-3 h-3" strokeWidth={1.5} />
+                  <ImageIcon className="w-3 h-3" strokeWidth={1.5} />
                   <span>Subir Imágenes</span>
                 </>
               )}

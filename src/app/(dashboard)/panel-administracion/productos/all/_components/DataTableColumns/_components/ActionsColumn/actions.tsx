@@ -1,3 +1,5 @@
+"use client";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +10,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { product } from "@prisma/client";
 import { Row } from "@tanstack/react-table";
-import { Image, MoreHorizontal, Pencil, Settings, Trash2 } from "lucide-react";
+import {
+  Image as ImageIcon,
+  MoreHorizontal,
+  Pencil,
+  Settings,
+  Trash2,
+} from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -45,7 +53,7 @@ const ActionsColumn = ({ row }: Props) => {
             href={`/panel-administracion/productos/edit/${row.original.id}/images/all`}
             className="flex items-center gap-2 w-full h-full"
           >
-            <Image className="w-3 h-3" />
+            <ImageIcon className="w-3 h-3" />
             <span>Ver imágenes</span>
           </Link>
         </DropdownMenuItem>

@@ -64,8 +64,10 @@ const CategoryForm = ({ mode, category }: Props) => {
     }
 
     setTimeout(() => {
-      form.reset();
       setFormLoading(false);
+      if (mode === "create") {
+        form.reset();
+      }
     }, 1200);
   };
 

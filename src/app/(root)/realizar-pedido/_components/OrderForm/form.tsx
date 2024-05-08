@@ -84,8 +84,8 @@ const OrderForm = () => {
     }, 1000);
   };
   return (
-    <div className="flex flex-col gap-8">
-      <p className="w-full max-w-[320px] text-sm text-zinc-500 dark:text-zinc-400">
+    <div className="w-full flex flex-col items-center justify-center gap-8">
+      <p className="w-full max-w-[320px] flex text-sm text-zinc-500 dark:text-zinc-400">
         Nota: Por el momento no tenemos una pasarela de pagos, así que puedes
         realizar un pedido simplemente rellenando este formulario, y el pago es
         a contraentrega
@@ -93,7 +93,7 @@ const OrderForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-4 border px-6 pt-6 pb-8 border-zinc-200 dark:border-zinc-800 w-full max-w-[320px]"
+          className="space-y-4 border px-6 pt-6 pb-8 border-zinc-200 dark:border-zinc-800 w-full max-w-[320px] flex flex-col items-center justify-center"
         >
           <Logo />
 
@@ -124,7 +124,7 @@ const OrderForm = () => {
                         field.onChange(value);
                       }}
                       defaultCountry="PE"
-                      className={`${styles["phone-input-container"]} ring-1 ring-zinc-200 dark:ring-zinc-800 focus-within:ring-offset-zinc-800 focus-within:ring-offset-2 focus-within:rounded-md dark:focus-within:ring-offset-zinc-200 text-sm`}
+                      className={`${styles["phone-input-container"]} w-full ring-1 ring-zinc-200 dark:ring-zinc-800 focus-within:ring-offset-zinc-800 focus-within:ring-offset-2 focus-within:rounded-md dark:focus-within:ring-offset-zinc-200 text-sm`}
                       placeholder="999 999 999"
                     />
                   </FormControl>

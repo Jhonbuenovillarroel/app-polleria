@@ -87,7 +87,9 @@ const ProductForm = ({ categories, mode, product }: Props) => {
 
     setTimeout(() => {
       setFormLoading(false);
-      form.reset();
+      if (mode === "create") {
+        form.reset();
+      }
     }, 1200);
   };
 

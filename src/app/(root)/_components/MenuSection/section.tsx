@@ -9,7 +9,7 @@ interface Props {
 
 const MenuSection = ({ products }: Props) => {
   return (
-    <section className="pt-12 pb-20 flex flex-col gap-12">
+    <section className="pt-12 pb-20 flex flex-col gap-12 px-4">
       <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold">
         Nuestros Productos
       </h2>
@@ -21,7 +21,7 @@ const MenuSection = ({ products }: Props) => {
           ))}
         </div>
       ) : (
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex flex-col gap-2 items-center justify-center">
           <ShoppingBasket className="w-5 h-5" strokeWidth={1.5} />
           <p className="w-full max-w-[280px]">No hay productos disponibles</p>
         </div>

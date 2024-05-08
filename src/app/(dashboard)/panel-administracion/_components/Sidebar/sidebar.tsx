@@ -10,6 +10,9 @@ import {
   LayoutDashboard,
   Package,
   Plus,
+  Power,
+  Truck,
+  User,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import styles from "./sidebar.module.css";
@@ -21,6 +24,8 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { signOut } from "next-auth/react";
 
 const SideBar = () => {
   const pathname = usePathname();
@@ -149,7 +154,7 @@ const SideBar = () => {
                 <AccordionItem value="item-03" className="border-none">
                   <AccordionTrigger className="px-4 hover:no-underline hover:bg-zinc-200 dark:hover:bg-zinc-900 py-3">
                     <div className="flex gap-4 items-center">
-                      <LayoutDashboard className="w-4 h-4" strokeWidth={1.5} />
+                      <Truck className="w-4 h-4" strokeWidth={1.5} />
                       <span>Ordenes</span>
                     </div>
                   </AccordionTrigger>
@@ -168,7 +173,51 @@ const SideBar = () => {
                   </AccordionContent>
                 </AccordionItem>
               </li>
+              <li>
+                <AccordionItem value="item-04" className="border-none">
+                  <AccordionTrigger className="px-4 hover:no-underline hover:bg-zinc-200 dark:hover:bg-zinc-900 py-3">
+                    <div className="flex gap-4 items-center">
+                      <User className="w-4 h-4" strokeWidth={1.5} />
+                      <span>Usuarios</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="p-0">
+                    <Link
+                      href={`/panel-administracion/usuarios/all`}
+                      className={`flex items-center gap-2 px-12 hover:bg-zinc-200 dark:hover:bg-zinc-900 py-3 transition-all duration-200 ${
+                        pathname === "/panel-administracion/usuarios/all"
+                          ? "bg-zinc-300 dark:bg-zinc-900"
+                          : ""
+                      }`}
+                    >
+                      <Eye className="w-4 h-4" strokeWidth={1.5} />
+                      <span>Ver todos</span>
+                    </Link>
+                    <Link
+                      href={`/panel-administracion/usuarios/new`}
+                      className={`flex items-center gap-2 px-12 hover:bg-zinc-200 dark:hover:bg-zinc-900 py-3 transition-all duration-200 ${
+                        pathname === "/panel-administracion/usuarios/new"
+                          ? "bg-zinc-300 dark:bg-zinc-900"
+                          : ""
+                      }`}
+                    >
+                      <Plus className="w-4 h-4" strokeWidth={1.5} />
+                      <span>Crear</span>
+                    </Link>
+                  </AccordionContent>
+                </AccordionItem>
+              </li>
             </Accordion>
+            <li className="flex items-center justify-center mt-9">
+              <Button
+                variant={"outline"}
+                className="flex items-center gap-2 text-nowrap"
+                onClick={() => signOut()}
+              >
+                <Power className="w-3.5 h-3.5" strokeWidth={1.5} />
+                {showSideBar ? <span>Cerrar Sesión</span> : <></>}
+              </Button>
+            </li>
             <li className="flex items-center justify-center mt-9">
               <ToggleThemeButton />
             </li>

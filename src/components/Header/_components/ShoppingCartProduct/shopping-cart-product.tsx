@@ -16,7 +16,7 @@ const ShoppingCartProduct = ({ product }: Props) => {
   const shoppingCartStore = useShoppingCartStore((state) => state);
 
   return (
-    <div className="flex items-center gap-5 relative px-6 py-5 rounded-md hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all duration-200">
+    <div className="flex flex-col min-[440px]:flex-row items-center gap-5 relative px-6 py-5 rounded-md hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all duration-200">
       <Image
         className="w-24 h-fit"
         src={!!product.images.length ? product.images[0].url : ""}

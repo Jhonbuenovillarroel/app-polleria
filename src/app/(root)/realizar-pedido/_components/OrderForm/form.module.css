@@ -6,6 +6,7 @@
   flex-direction: row;
 }
 .phone-input-container input {
+  width: 100%;
   outline: none;
   padding: 0 8px;
 }

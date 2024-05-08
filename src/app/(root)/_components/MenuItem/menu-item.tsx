@@ -18,9 +18,9 @@ const MenuItem = ({ product }: Props) => {
   const [addingProduct, setAddingProduct] = useState(false);
 
   return (
-    <div className="w-full flex flex-col gap-6 px-8 py-6 rounded-md shadow-md">
+    <div className="w-full max-w-[280px] flex flex-col gap-6 px-8 py-6 rounded-md shadow-md">
       <Image
-        className="rounded-full w-full mx-auto"
+        className="rounded-full w-full max-w-[150px] mx-auto"
         src={`${!!product.images.length ? product.images[0].url : ""}`}
         width={400}
         height={400}

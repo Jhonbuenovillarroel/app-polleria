@@ -10,10 +10,12 @@ interface Props {
 const MenuSection = ({ products }: Props) => {
   return (
     <section className="pt-12 pb-20 flex flex-col gap-12">
-      <h2 className="text-center text-3xl font-semibold">Nuestros Productos</h2>
+      <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold">
+        Nuestros Productos
+      </h2>
 
       {!!products.length ? (
-        <div className="grid grid-cols-3 gap-12 max-w-[900px] mx-auto">
+        <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-3 gap-12 max-w-[900px] mx-auto">
           {products.map((product) => (
             <MenuItem key={product.id} product={product} />
           ))}

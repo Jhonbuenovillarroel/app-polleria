@@ -1,7 +1,11 @@
 "use client";
 
 import React from "react";
-import { Table as ReactTable, flexRender } from "@tanstack/react-table";
+import {
+  ColumnDef,
+  Table as ReactTable,
+  flexRender,
+} from "@tanstack/react-table";
 import {
   Table,
   TableBody,
@@ -10,15 +14,16 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { columns } from "@/app/(dashboard)/panel-administracion/categorias/all/_components/DataTableColumns/columns";
 
-interface DataTableProps<TData> {
+interface DataTableProps<TData, TValue> {
   table: ReactTable<TData>;
+  columns: ColumnDef<TData, TValue>[];
 }
 
-const DataTableGlobal: <TData>({
+const DataTableGlobal: <TData, TValue>({
   table,
-}: DataTableProps<TData>) => JSX.Element = ({ table }) => {
+  columns,
+}: DataTableProps<TData, TValue>) => JSX.Element = ({ table, columns }) => {
   return (
     <div className="border w-full max-w-[800px] mt-12 mb-12 rounded-md border-zinc-300 dark:border-zinc-800">
       <Table>

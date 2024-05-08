@@ -22,7 +22,7 @@ const DataTable = <TData, TValue>({ columns, data }: Props<TData, TValue>) => {
 
   return (
     <div className="flex items-center justify-center w-full">
-      <DataTableGlobal table={table} />
+      <DataTableGlobal table={table} columns={columns} />
     </div>
   );
 };

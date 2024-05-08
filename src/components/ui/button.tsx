@@ -21,7 +21,7 @@ const buttonVariants = cva(
           "hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50",
         link: "text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50",
         orangeButton:
-          "text-zinc-100 bg-orange-500 border border-orange-500 hover:bg-orange-400",
+          "text-zinc-100 bg-orange-500 border border-orange-500 hover:bg-orange-400 hover:border-orange-400",
         orangeOutline:
           "text-zinc-100 bg-transparent border border-orange-500 hover:bg-orange-500 transition-all duration-300",
       },

@@ -1,0 +1,11 @@
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.show-scrollbar::-webkit-scrollbar:horizontal {
+  width: 0;
+  height: 0;
+}
+.sidebar-container {
+  height: calc(100vh - 64px);
+}

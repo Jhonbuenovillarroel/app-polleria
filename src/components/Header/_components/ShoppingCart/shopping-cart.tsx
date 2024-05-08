@@ -14,6 +14,7 @@ import {
 import ShoppingCartProductsContainer from "../ShoppingCartProductsContainer/container";
 import { useShoppingCartStore } from "@/store/shopping-cart-store";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const ShoppingCart = () => {
   const shoppingCartStore = useShoppingCartStore((state) => state);
@@ -47,9 +48,15 @@ const ShoppingCart = () => {
 
         <SheetFooter>
           {!!shoppingCartStore.products.length && (
-            <Button variant={"orangeButton"} className="w-full">
+            <Link
+              href={"/realizar-pedido"}
+              className="w-full flex items-center justify-center text-zinc-100 bg-orange-500 hover:bg-orange-400 h-11 rounded-md transition-all duration-150"
+              onClick={() => {
+                shoppingCartStore.shoppingCartIsOpen(false);
+              }}
+            >
               Realizar Pedido
-            </Button>
+            </Link>
           )}
         </SheetFooter>
       </SheetContent>

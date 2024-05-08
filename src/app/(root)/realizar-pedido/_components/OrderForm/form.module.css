@@ -1,0 +1,11 @@
+.phone-input-container {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+}
+.phone-input-container input {
+  outline: none;
+  padding: 0 8px;
+}

@@ -16,6 +16,7 @@ interface ShoppingCartStoreType {
   decreaseProductUnits: (id: string) => void;
   shoppingCartIsOpen: (option: boolean) => void;
   showShoppingCart: boolean;
+  setProducts: (products: ShoppingCartProductType[]) => void;
 }
 
 export const useShoppingCartStore = create<ShoppingCartStoreType>()(
@@ -58,6 +59,7 @@ export const useShoppingCartStore = create<ShoppingCartStoreType>()(
       shoppingCartIsOpen: (option: boolean) =>
         set({ showShoppingCart: option }),
       showShoppingCart: false,
+      setProducts: (products) => set({ products: [...products] }),
     }),
     {
       name: "shopping-cart-storage",

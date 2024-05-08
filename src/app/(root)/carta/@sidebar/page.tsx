@@ -1,6 +1,7 @@
 import React from "react";
 import CategoryFilters from "./_components/CategoryFilters/category-filters";
 import { getAllCategories } from "@/dbqueries/categories/get-all";
+import SideBar from "./_components/SideBar/sidebar";
 
 const getData = async () => {
   const categories = await getAllCategories();
@@ -14,12 +15,10 @@ const Page = async ({
 }) => {
   const data = await getData();
   return (
-    <div className="w-60 shrink-0 grow-0 py-10 px-6 h-[500px]">
-      <CategoryFilters
-        categories={data}
-        categorySearchParameter={searchParams.categories}
-      />
-    </div>
+    <SideBar
+      categories={data}
+      categorySearchParameter={searchParams.categories}
+    />
   );
 };
 

@@ -11,9 +11,9 @@ interface Props {
 
 const ProductsContainer = ({ products }: Props) => {
   return (
-    <div className="w-full px-8">
+    <div className="w-full px-4 sm:px-8">
       {!!products.length ? (
-        <div className="grid grid-cols-4 gap-8 justify-items-center">
+        <div className="w-full grid grid-cols-1 min-[450px]:grid-cols-2 min-[720px]:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
           {products.map((product) => (
             <MenuItem key={product.id} product={product} />
           ))}

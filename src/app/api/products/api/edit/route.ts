@@ -21,6 +21,7 @@ export const POST = async (req: NextRequest) => {
       where: { id },
       include: { categories: true },
     });
+    console.log(product);
     if (product?.name != name) {
       const nameExists = await prisma.product.findUnique({ where: { name } });
       if (nameExists) {
@@ -31,7 +32,7 @@ export const POST = async (req: NextRequest) => {
     }
 
     const updatedProduct = await prisma.product.update({
-      where: { name },
+      where: { id },
       data: {
         name,
         price: parseInt(price),
@@ -50,6 +51,7 @@ export const POST = async (req: NextRequest) => {
       { status: 200 }
     );
   } catch (error) {
+    console.log(error);
     return NextResponse.json({ error }, { status: 500 });
   }
 };

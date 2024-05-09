@@ -43,7 +43,9 @@ const formSchema = z.object({
         id: z.string({ required_error: "Campo Obligatorio" }),
       })
     )
-    .nonempty(),
+    .nonempty({
+      message: "Debes elegir al menos 1 categoría para este producto",
+    }),
   description: z.string().optional(),
 });
 

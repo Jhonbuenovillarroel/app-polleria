@@ -36,12 +36,14 @@ const formSchema = z.object({
   price: z
     .string({ required_error: "Campo Obligaotrio" })
     .min(1, { message: "Debe ser de al menos 0.1" }),
-  categories: z.array(
-    z.object({
-      value: z.string({ required_error: "Campo Obligatorio" }),
-      id: z.string({ required_error: "Campo Obligatorio" }),
-    })
-  ),
+  categories: z
+    .array(
+      z.object({
+        value: z.string({ required_error: "Campo Obligatorio" }),
+        id: z.string({ required_error: "Campo Obligatorio" }),
+      })
+    )
+    .nonempty(),
   description: z.string().optional(),
 });
 

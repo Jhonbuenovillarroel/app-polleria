@@ -10,7 +10,7 @@ import Logo from "../(theme)/Logo/logo";
 
 const Header = () => {
   return (
-    <header className="px-4 sm:px-8 py-2 flex justify-between h-[64px]">
+    <header className="sticky top-0 z-10 bg-zinc-100 dark:bg-zinc-950 shadow-lg px-4 sm:px-8 py-2 flex justify-between h-[64px]">
       <section className="flex items-center gap-4 sm:gap-6">
         <Link href={`/`} className="text-xl font-bold">
           <Logo className="w-10" />

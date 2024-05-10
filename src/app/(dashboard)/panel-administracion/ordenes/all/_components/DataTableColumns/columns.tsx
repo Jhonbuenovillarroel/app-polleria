@@ -35,9 +35,9 @@ export const columns = [
     id: "Fecha",
     header: () => <span>Fecha</span>,
     cell: (info) => (
-      <span>
+      <p className="min-w-[120px]">
         {format(info.getValue(), `dd 'de' MMMM 'del' yyyy`, { locale: es })}
-      </span>
+      </p>
     ),
   }),
   columnHelper.accessor("date", {
@@ -50,7 +50,7 @@ export const columns = [
   columnHelper.accessor("customerName", {
     id: "Nombre del cliente",
     header: () => <span>Nombre del cliente</span>,
-    cell: (info) => <span>{info.getValue()}</span>,
+    cell: (info) => <p className="min-w-[150px]">{info.getValue()}</p>,
   }),
   columnHelper.accessor("customerAddress", {
     id: "Dirección del cliente",

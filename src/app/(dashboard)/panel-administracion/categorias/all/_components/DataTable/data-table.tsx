@@ -20,11 +20,7 @@ const DataTable = <TData, TValue>({ columns, data }: Props<TData, TValue>) => {
     getCoreRowModel: getCoreRowModel(),
   });
 
-  return (
-    <div className="w-full">
-      <DataTableGlobal table={table} columns={columns} />
-    </div>
-  );
+  return <DataTableGlobal table={table} columns={columns} />;
 };
 
 export default DataTable;

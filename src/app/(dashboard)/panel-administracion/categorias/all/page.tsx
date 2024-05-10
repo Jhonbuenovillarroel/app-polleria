@@ -14,7 +14,7 @@ const Page = async () => {
 
   return (
     <main className="w-full">
-      <section className="w-full max-w-[800px] mx-auto">
+      <section className="w-full">
         <DataTable columns={columns as any} data={data} />
       </section>
     </main>

@@ -9,6 +9,9 @@
 html.dark *::-webkit-scrollbar {
   background-color: rgb(40, 40, 40);
 }
+*::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
 *::-webkit-scrollbar-thumb {
   background-color: rgb(150, 150, 150);
 }

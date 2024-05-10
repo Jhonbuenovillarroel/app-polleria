@@ -208,7 +208,7 @@ const SideBar = () => {
                 </AccordionItem>
               </li>
             </Accordion>
-            <li className="flex items-center justify-center mt-9">
+            <li className="flex items-center justify-center mt-8">
               <Button
                 variant={"outline"}
                 className="flex items-center gap-2 text-nowrap"
@@ -218,7 +218,7 @@ const SideBar = () => {
                 {showSideBar ? <span>Cerrar Sesión</span> : <></>}
               </Button>
             </li>
-            <li className="flex items-center justify-center mt-9">
+            <li className="flex items-center justify-center mt-4">
               <ToggleThemeButton />
             </li>
           </ul>

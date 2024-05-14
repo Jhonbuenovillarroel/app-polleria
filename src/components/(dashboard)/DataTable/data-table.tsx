@@ -25,7 +25,7 @@ const DataTableGlobal: <TData, TValue>({
   columns,
 }: DataTableProps<TData, TValue>) => JSX.Element = ({ table, columns }) => {
   return (
-    <div className="border w-full flex text-sm max-w-[800px] mx-auto mt-12 mb-12 rounded-md border-zinc-300 dark:border-zinc-800">
+    <div className="border w-full flex text-sm max-w-[800px] mx-auto mt-6 mb-12 rounded-md border-zinc-300 dark:border-zinc-800">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

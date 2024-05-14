@@ -1,4 +1,5 @@
 import { type ClassValue, clsx } from "clsx";
+import { format } from "date-fns";
 import Swal, { SweetAlertCustomClass } from "sweetalert2";
 import { twMerge } from "tailwind-merge";
 
@@ -59,4 +60,10 @@ export const generateSweetAlertPopup = ({
     },
     showLoaderOnConfirm: showLoaderOnConfirm ? showLoaderOnConfirm : false,
   });
+};
+
+export const formatLocaleDate = (date: Date) => {
+  const formatDate = new Date(format(new Date(date), "MM/dd/yyyy"));
+  console.log(formatDate);
+  return formatDate;
 };

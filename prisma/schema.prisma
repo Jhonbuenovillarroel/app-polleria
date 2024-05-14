@@ -68,6 +68,13 @@ model order {
   customerName      String
   customerCellPhone String
   customerAddress   String
+  status            orderStatus      @default(pending)
   products          product[]
   orderedProducts   orderedProduct[]
+}
+
+enum orderStatus {
+  pending
+  delivered
+  cancelled
 }

@@ -55,7 +55,7 @@ const MenuItem = ({ product }: Props) => {
                   <>
                     <Button
                       variant={"orangeButton"}
-                      className="flex items-center gap-2 text-zinc-100 hover:text-orange-500 dark:hover:text-orange-300 dark:hover:border-orange-300 hover:bg-transparent"
+                      className="flex items-center gap-2 text-zinc-100 "
                       onClick={() => {
                         setAddingProduct(true);
 

@@ -38,7 +38,7 @@ export const columns = [
   columnHelper.accessor("name", {
     id: "Nombre",
     header: () => <span>Nombre</span>,
-    cell: (info) => <span>{info.getValue()}</span>,
+    cell: (info) => <p className="min-w-[150px]">{info.getValue()}</p>,
   }),
   columnHelper.accessor((row) => `${row.price}`, {
     id: "Precio",

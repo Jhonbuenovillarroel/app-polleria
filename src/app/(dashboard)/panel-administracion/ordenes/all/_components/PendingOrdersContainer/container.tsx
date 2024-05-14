@@ -87,6 +87,7 @@ const PendingOrdersContainer = ({ orders }: Props) => {
                                     title: "Operación exitosa",
                                     subtitle:
                                       "Se cambió el estado de la orden a entregada",
+                                    confirmButtonText: "Ok",
                                   }).then((result) => {
                                     router.refresh();
                                   });
@@ -124,6 +125,7 @@ const PendingOrdersContainer = ({ orders }: Props) => {
                                     icon: "success",
                                     title: "Operación exitosa",
                                     subtitle: "Se canceló la orden",
+                                    confirmButtonText: "Ok",
                                   }).then((result) => {
                                     router.refresh();
                                   });

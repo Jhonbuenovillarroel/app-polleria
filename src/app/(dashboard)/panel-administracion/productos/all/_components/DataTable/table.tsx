@@ -30,6 +30,7 @@ const DataTable = <TData, TValue>({ columns, data }: Props<TData, TValue>) => {
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     initialState: { pagination: { pageIndex: 0, pageSize: 4 } },
+    onPaginationChange: setPagination,
     state: { pagination },
   });
 

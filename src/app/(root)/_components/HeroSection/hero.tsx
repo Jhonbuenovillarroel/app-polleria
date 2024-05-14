@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="relative z-[1] flex flex-col items-center gap-10">
         <div className="flex flex-col gap-3 items-center justify-center text-center px-4">
           <h1 className="text-3xl sm:text-4xl text-zinc-100 font-bold">
-            Pollería Paisita
+            Pollería &quot;El Paishita&quot;
           </h1>
           <p className="text-zinc-200 text-sm sm:text-base">
             Sabor de casa, sólo con productos naturales y frescos

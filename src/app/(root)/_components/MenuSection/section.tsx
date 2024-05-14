@@ -48,9 +48,15 @@ const MenuSection = ({ products, categories }: Props) => {
                                   .map((category) => category.name)
                                   .includes(category.name)
                               )
-                              .map((product) => (
-                                <MenuItem key={product.id} product={product} />
-                              ))}
+                              .map(
+                                (product, i) =>
+                                  i < 3 && (
+                                    <MenuItem
+                                      key={product.id}
+                                      product={product}
+                                    />
+                                  )
+                              )}
                           </div>
                         ) : (
                           <div className="w-full flex flex-col gap-2 items-center justify-center">

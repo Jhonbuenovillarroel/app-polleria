@@ -113,7 +113,7 @@ const PendingOrdersContainer = ({ orders }: Props) => {
                           generateSweetAlertPopup({
                             title: "Estás seguro de continuar?",
                             subtitle:
-                              "Esta acción cambiará el estado de la orden a completada",
+                              "Esta acción cambiará el estado de la orden a cancelada",
                             preConfirm: async () => {
                               try {
                                 const { data } = await axios.post(

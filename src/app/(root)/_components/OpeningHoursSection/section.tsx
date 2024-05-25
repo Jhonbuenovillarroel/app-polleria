@@ -14,7 +14,7 @@ const OpeningHoursSection = () => {
         </p>
         <p className="text-sm sm:text-base text-zinc-300 flex items-center gap-2">
           <Clock className="w-4 h-4" />
-          <span>10:00 am 10:00 pm</span>
+          <span>11:00 am 10:00 pm</span>
         </p>
       </div>
     </section>

@@ -74,36 +74,36 @@ const OrderForm = () => {
       return;
     }
 
-    generateSweetAlertPopup({
-      title: "Delivery pausado",
-      subtitle:
-        "Hemos tenido unas semanas muy pesadas últimamente, y hemos decidido pausar la entrega de pedidos a domicilio por el momento, pronto reorganizaremos todo para que puedas realizar tus pedidos por la web",
-      confirmButtonText: "Entiendo",
-    });
+    // generateSweetAlertPopup({
+    //   title: "Delivery pausado",
+    //   subtitle:
+    //     "Hemos tenido unas semanas muy pesadas últimamente, y hemos decidido pausar la entrega de pedidos a domicilio por el momento, pronto reorganizaremos todo para que puedas realizar tus pedidos por la web",
+    //   confirmButtonText: "Entiendo",
+    // });
 
-    // try {
-    //   const { data } = await axios.post("/api/orders/api/create", {
-    //     customerData: values,
-    //     products: shoppingCartStore.products,
-    //   });
+    try {
+      const { data } = await axios.post("/api/orders/api/create", {
+        customerData: values,
+        products: shoppingCartStore.products,
+      });
 
-    //   if (data.ok) {
-    //     generateSweetAlertPopup({
-    //       icon: "success",
-    //       title: data.message,
-    //       subtitle:
-    //         "La orden se creó y envió al negocio, tu pedido llegará a tu casa dentro 30 - 60 minutos, gracias por elegirnos",
-    //       confirmButtonText: "Genial",
-    //     });
-    //     shoppingCartStore.setProducts([]);
-    //   }
-    // } catch (error) {
-    //   generateSweetAlertPopup({
-    //     icon: "error",
-    //     title: "Algo salió mal",
-    //     subtitle: "Vuelve a intentarlo o inténtalo más tarde",
-    //   });
-    // }
+      if (data.ok) {
+        generateSweetAlertPopup({
+          icon: "success",
+          title: data.message,
+          subtitle:
+            "La orden se creó y envió al negocio, tu pedido llegará a tu casa dentro 30 - 60 minutos, gracias por elegirnos",
+          confirmButtonText: "Genial",
+        });
+        shoppingCartStore.setProducts([]);
+      }
+    } catch (error) {
+      generateSweetAlertPopup({
+        icon: "error",
+        title: "Algo salió mal",
+        subtitle: "Vuelve a intentarlo o inténtalo más tarde",
+      });
+    }
 
     setTimeout(() => {
       form.reset();
